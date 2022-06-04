@@ -18,6 +18,16 @@ body {
   --text-decoration-color: #ff9a00;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 .container {
   margin: 0 auto;
   padding: 0 30px;
@@ -105,6 +115,10 @@ body {
   justify-content: start;
 }
 
+.contact-info__item:hover {
+  color: var(--text-decoration-color);
+}
+
 .contact-info__item:not(:last-child) {
   margin-bottom: 20px;
 }
@@ -116,8 +130,8 @@ body {
   justify-content: center;
 }
 
-.contact-info__item-icon path {
-  fill: var(--icon-color);
+.contact-info__item-icon {
+  fill: currentColor;
 }
 
 .contact-info__item-icon {
