@@ -21,7 +21,6 @@ body {
 ul {
   margin: 0;
   padding: 0;
-  list-style: none;
 }
 
 a {
@@ -74,6 +73,14 @@ a {
     margin-bottom: 20px;
   }
 
+  .skills {
+    flex-direction: column;
+  }
+
+  .skills__colum:first-child {
+    margin-bottom: 20px;
+  }
+
   .experiences {
     margin-right: 0;
   }
@@ -102,6 +109,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  list-style: none;
 }
 
 .contact-info__block--center {
@@ -167,7 +175,7 @@ a {
   vertical-align: text-bottom;
 }
 
-.intro__icon path {
+.intro__icon {
   fill: var(--text-decoration-color);
 }
 
@@ -176,15 +184,25 @@ a {
   text-align: justify;
 }
 
+.skills {
+  display: flex;
+  justify-content: space-around;
+}
+
 .skills__header {
   color: var(--secondary-text-color);
   text-align: center;
   margin-bottom: 15px;
 }
 
-.skills__text {
+.skills__colum {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skills__container {
   color: var(--secondary-text-color);
-  text-align: justify;
+  margin: 0 auto;
 }
 
 /** ========== Experience and additional info styles ========== */
