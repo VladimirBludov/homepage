@@ -60,7 +60,12 @@ a {
 }
 
 @media screen and (max-width: 576px) {
-  .main-info,
+  .resume {
+    margin: 0 auto;
+
+    max-width: 576px;
+  }
+
   .contact_info_container {
     flex-direction: column;
   }
@@ -73,11 +78,15 @@ a {
     margin-bottom: 20px;
   }
 
+  .contact-info__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
   .skills {
     flex-direction: column;
   }
 
-  .skills__colum:first-child {
+  .skills__colum:not(:last-child) {
     margin-bottom: 20px;
   }
 
@@ -116,14 +125,15 @@ a {
   justify-content: center;
 }
 
-.contact-info__item {
+.contact-info__link {
   color: var(--secondary-text-color);
   text-decoration: none;
   display: flex;
+  align-items: center;
   justify-content: start;
 }
 
-.contact-info__item:hover {
+.contact-info__link:hover {
   color: var(--text-decoration-color);
 }
 
@@ -205,16 +215,19 @@ a {
   margin: 0 auto;
 }
 
-/** ========== Experience and additional info styles ========== */
-
-.experiences {
-  flex: 1 1 60%;
-  margin-right: 50px;
+.skills__item {
+  color: var(--text-decoration-color);
 }
+
+.skills__text {
+  color: var(--secondary-text-color);
+}
+
+/** ========== Experience and additional info styles ========== */
 
 .experiences__header {
   color: var(--secondary-text-color);
-  text-align: left;
+  text-align: center;
   margin-bottom: 20px;
 }
 
@@ -233,34 +246,59 @@ a {
   margin-bottom: 20px;
 }
 
-.experiences__company-project {
-  margin-left: 15px;
-  margin-bottom: 25px;
-}
-
-.experiences__company-project-role {
-  color: var(--durability-text-color);
-  text-align: left;
-  margin-bottom: 10px;
-  font-size: 15px;
-}
-
 .experiences__company-project-name {
   color: var(--primary-text-color);
   text-align: left;
   margin-bottom: 10px;
+  font-size: 18px;
 }
 
-.experiences__company-project-responsibilities {
+.experiences__company-projects {
+  margin-left: 15px;
+}
+
+.experiences__company-projects-item {
+  color: var(--text-decoration-color);
+}
+
+.experiences__company-projects-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.experiences__company-project-text {
   color: var(--secondary-text-color);
-  padding-left: 20px;
+}
+
+.experiences__company-project-link {
+  color: var(--durability-text-color);
+  font-weight: 600;
+}
+.experiences__company-project-link:hover {
+  color: var(--text-decoration-color);
+}
+
+.experiences__work:not(:last-child),
+.experiences__education:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.experiences__work-company,
+.experiences__education-speciality {
+  margin-bottom: 10px;
+  font-style: 18px;
+  color: var(--secondary-text-color);
+}
+
+.experiences__work-date,
+.experiences__education-date {
+  color: var(--durability-text-color);
 }
 
 .additional-info {
   flex: 1 1 40%;
 }
 
-.additional-info__education {
+/* .additional-info__education {
   margin-bottom: 20px;
 }
 
@@ -285,7 +323,7 @@ a {
 
 .additional-info__education-university-name {
   color: var(--secondary-text-color);
-}
+} */
 
 .additional-info__languages {
   margin-bottom: 20px;
