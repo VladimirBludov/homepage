@@ -16,6 +16,7 @@ body {
   --icon-color: #6a737d;
   --border-color: #ff9a0045;
   --text-decoration-color: #ff9a00;
+  --animation-cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 ul {
@@ -59,7 +60,7 @@ a {
   margin-bottom: 15px;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 767px) {
   .resume {
     margin: 0 auto;
 
@@ -123,6 +124,12 @@ a {
 
 .contact-info__block--center {
   justify-content: center;
+  transition: transform 250ms var(--animation-cubic);
+}
+
+.contact-info__block--center:hover {
+  justify-content: center;
+  transform: scale(1.1);
 }
 
 .contact-info__link {
@@ -131,6 +138,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: start;
+  transition: color 250ms var(--animation-cubic);
 }
 
 .contact-info__link:hover {
@@ -268,10 +276,14 @@ a {
 .experiences__company-project-text {
   color: var(--secondary-text-color);
 }
+.experiences__company-project-text:not(:last-child) {
+  margin-bottom: 5px;
+}
 
 .experiences__company-project-link {
-  color: var(--durability-text-color);
+  color: var(--primary-text-color);
   font-weight: 600;
+  transition: color 250ms var(--animation-cubic);
 }
 .experiences__company-project-link:hover {
   color: var(--text-decoration-color);
@@ -285,7 +297,6 @@ a {
 .experiences__work-company,
 .experiences__education-speciality {
   margin-bottom: 10px;
-  font-style: 18px;
   color: var(--secondary-text-color);
 }
 
